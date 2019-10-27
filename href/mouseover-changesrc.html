@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      main {
+        margin: 0 auto;
+        width: 20.2rem;
+        border: 0.1rem solid black;
+        overflow: hidden;
+      }
+      #mainImg {
+        width: 15rem;
+        height: 15rem;
+      }
+      img {
+        width: 5rem;
+        height: 5rem;
+        display: block;
+        padding: 0.1rem;
+        float: left;
+        border-radius: 0.3rem;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <img id="mainImg" src="../img/big_1.jpg" alt="" /><img
+        src="../img/big_1.jpg"
+        alt=""
+      /><img src="../img/big_2.jpg" alt="" /><img
+        src="../img/big_3.jpg"
+        alt=""
+      /><img src="../img/big_4.jpg" alt="" /><img
+        src="../img/big_5.jpg"
+        alt=""
+      /><img src="../img/big_6.jpg" alt="" /><img
+        src="../img/big_7.jpg"
+        alt=""
+      /><img src="../img/big_8.jpg" alt="" /><img
+        src="../img/big_9.jpg"
+        alt=""
+      /><img src="../img/big_10.jpg" alt="" /><img
+        src="../img/big_11.jpg"
+        alt=""
+      />
+    </main>
+    <script>
+      var obj = document.getElementById("mainImg"),
+        img = document.getElementsByTagName("img");
+      for (var i = 1; i < img.length; i++) {
+        img[i].onmouseover = function() {
+          var src = this.src;
+          obj.src = src;
+        };
+      }
+    </script>
+  </body>
+</html>

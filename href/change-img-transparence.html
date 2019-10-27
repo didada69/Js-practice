@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      main {
+        width: 47rem;
+        margin: 0 auto;
+        padding: 0.5rem;
+        border: 1px solid black;
+      }
+      img {
+        margin: 0.5rem;
+        border: 1px solid gray;
+        opacity: 0.5;
+        filter: Alpha(opacity = 50);
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <img src="../img/1.jpg" />
+      <img src="../img/2.jpg" />
+      <img src="../img/3.jpg" />
+      <img src="../img/4.jpg" />
+      <img src="../img/5.jpg" />
+      <img src="../img/6.jpg" />
+      <img src="../img/7.jpg" />
+      <img src="../img/8.jpg" />
+      <img src="../img/9.jpg" />
+      <img src="../img/10.jpg" />
+    </main>
+    <script>
+      var img = document.getElementsByTagName("img");
+      for (var i = 0; i < img.length; i++) {
+        img[i].onmouseover = function() {
+          this.style.cssText += "opacity: 1;filter: Alpha(opacity = 100);";
+        };
+        img[i].onmouseout = function() {
+          this.style.cssText = "";
+        };
+      }
+    </script>
+  </body>
+</html>

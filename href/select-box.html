@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      main {
+        width: 30rem;
+        margin: 0 auto;
+      }
+      ul {
+        display: none;
+        list-style: none;
+        border: 1px solid blue;
+        vertical-align: top;
+        width: 4rem;
+      }
+      li {
+        border: 1px;
+        text-align: center;
+      }
+      li:hover {
+        background: gray;
+      }
+      a {
+        display: block;
+        text-decoration: none;
+        color: black;
+      }
+      #close {
+        border-top: 1px solid blue;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <button>选择输入法模式</button>
+      <ul>
+        <li><a href="javascript:void(0)">手写</a></li>
+        <li><a href="javascript:void(0)">拼音</a></li>
+        <li id="close"><a href="javascript:void(0)">关闭</a></li>
+      </ul>
+    </main>
+    <script>
+      var obj = document.getElementsByTagName("ul")[0];
+      var btn = document.getElementsByTagName("button")[0];
+      var close = document.getElementById("close");
+      btn.onclick = function() {
+        obj.style.display = obj.style.display == "block" ? "none" : "block";
+      };
+      close.onclick = function() {
+        obj.style.display = "none";
+      };
+    </script>
+  </body>
+</html>

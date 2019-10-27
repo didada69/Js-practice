@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <link rel="stylesheet" href="" id="css" />
+    <style>
+      div {
+        width: 40rem;
+        margin: 10rem auto;
+      }
+      button {
+        width: 1rem;
+        height: 1rem;
+        border: 1px solid black;
+      }
+      a {
+        text-decoration: none;
+        color: #4cb4e7;
+        border: 1px solid #a3a380;
+        display: inline-block;
+        width: 5rem;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <button style="background-color:rgb(177, 92, 92)"></button>
+      <button style="background-color: rgb(128, 167, 128)"></button>
+      <button style="background-color: rgb(94, 72, 72)"></button>
+      <nav>
+        <a href="#">新闻</a>
+        <a href="#">娱乐</a>
+        <a href="#">体育</a>
+        <a href="#">电影</a>
+        <a href="#">音乐</a>
+        <a href="#">旅游</a>
+      </nav>
+    </div>
+    <script>
+      window.onload = function() {
+        var css = [
+          "../style/red.css",
+          "../style/green.css",
+          "../style/black.css"
+        ];
+        var obj = document.getElementById("css");
+        var btn = document.getElementsByTagName("button");
+        for (var i = 0; i < btn.length; i++) {
+          btn[i].index = i;
+          btn[i].onclick = function() {
+            obj.setAttribute("href", css[this.index]);
+          };
+        }
+      };
+    </script>
+  </body>
+</html>

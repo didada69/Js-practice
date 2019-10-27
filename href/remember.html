@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      main {
+        width: 30rem;
+        margin: 0 auto;
+      }
+      #hint {
+        display: none;
+        width: 10rem;
+        background: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div id="pass">
+        <input type="checkbox" id="remember" />
+        <label for="remember">俩周内自动登录</label>
+      </div>
+      <div id="hint">
+        为了您的信息安全请不要在网吧或公共区域勾选
+      </div>
+    </main>
+    <script>
+      window.onload = function() {
+        var obj = document.getElementById("pass");
+        var div = document.getElementById("hint");
+        obj.onmouseover = function() {
+          div.style.display = "block";
+        };
+        obj.onmouseout = function() {
+          div.style.display = "none";
+        };
+      };
+    </script>
+  </body>
+</html>

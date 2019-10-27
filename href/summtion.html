@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      main {
+        width: 30rem;
+        margin: 0 auto;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <input type="text" value="1,2,3,4,5,6,7,8,9" />
+      <button>求和</button>
+      <span>数字中间用逗号隔开</span>
+      <p></p>
+    </main>
+    <script>
+      var btn = document.getElementsByTagName("button")[0];
+      var p = document.getElementsByTagName("p")[0];
+      btn.onclick = function() {
+        var value = document.getElementsByTagName("input")[0].value;
+        var arr = value.split("," || "，");
+        p.innerHTML = arr.reduce(function(a, b) {
+          return parseInt(a) + parseInt(b);
+        });
+      };
+    </script>
+  </body>
+</html>

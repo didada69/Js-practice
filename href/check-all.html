@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      main {
+        width: 30rem;
+        margin: 0 auto;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <p><input type="checkbox" />全选<a href="javascript:;">反选</a></p>
+      <p><input type="checkbox" name="item" />一</p>
+      <p><input type="checkbox" name="item" />二</p>
+      <p><input type="checkbox" name="item" />三</p>
+      <p><input type="checkbox" name="item" />四</p>
+      <p><input type="checkbox" name="item" />五</p>
+      <p><input type="checkbox" name="item" />六</p>
+      <p><input type="checkbox" name="item" />七</p>
+      <p><input type="checkbox" name="item" />八</p>
+      <p><input type="checkbox" name="item" />九</p>
+      <p><input type="checkbox" name="item" />十</p>
+    </main>
+    <script>
+      var all = document.getElementsByTagName("input")[0],
+        input = document.getElementsByTagName("input"),
+        a = document.getElementsByTagName("a")[0];
+      all.onclick = function() {
+        for (var i = 1; i < input.length; i++) {
+          input[i].checked = this.checked;
+        }
+      };
+      a.onclick = function() {
+        for (var i = 1; i < input.length; i++) {
+          input[i].checked = !input[i].checked;
+        }
+      };
+    </script>
+  </body>
+</html>
